@@ -32,6 +32,7 @@ public class UserController {
             return ResponseEntity.ok(userService.authenticate(authRequest));
         }
         catch (Exception e){
+            System.out.println(e.toString());
             return ResponseEntity.badRequest().body(null);
         }
     }
